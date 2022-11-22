@@ -1,0 +1,40 @@
+[
+  {
+    "_id": "kiuE8",
+    "name": "",
+    "price": 100,
+    "labels": [],
+    "inStock": false
+  },
+  {
+    "_id": "t102",
+    "name": "wawaasd",
+    "price": 100,
+    "labels": [
+      "Doll",
+      "Battery Powered",
+      "Baby"
+    ],
+    "inStock": false
+  },
+  {
+    "_id": "t103",
+    "name": "Doll 3",
+    "price": 20,
+    "labels": [
+      "Doll",
+      "Baby"
+    ],
+    "inStock": false
+  },
+  {
+    "_id": "t105",
+    "name": "Doll 4",
+    "price": 121,
+    "labels": [
+      "Doll",
+      "Baby"
+    ],
+    "inStock": false
+  }
+]
