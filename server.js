@@ -11,18 +11,24 @@ app.use(express.static('public'))
 app.use(cookieParser())
 app.use(express.json())
 
-const corsOptions = {
-    origin: [
-        'http://localhost:8080',
+if (process.env.NODE_ENV === 'production') {
+    // Express serve static files on production environment
+    app.use(express.static(path.resolve(__dirname, 'public')))
+  } else {
+    // Configuring CORS
+    const corsOptions = {
+      // Make sure origin contains the url your frontend is running on
+      origin: [
         'http://127.0.0.1:8080',
-        'http://localhost:5173',
-        'http://127.0.0.1:5173',
+        'http://localhost:8080',
         'http://127.0.0.1:3000',
         'http://localhost:3000',
-    ],
-    credentials: true,
-}
-app.use(cors(corsOptions))
+      ],
+      credentials: true,
+    }
+    app.use(cors(corsOptions))
+  }
+  
 
 
 app.get('/api/toy', (req, res) => {
@@ -65,7 +71,6 @@ app.delete('/api/toy/:toyId/', (req, res) => {
     toyService.remove(req.params.toyId).then(toyId => res.send(`toy ${toyId} was deleted.`))
 })
 
-// const port = 
 const port = process.env.PORT || 3030;
 app.listen(port, () => {
     console.log(`App listening on port ${port}!`)
