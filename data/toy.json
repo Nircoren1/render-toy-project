@@ -8,14 +8,13 @@
   },
   {
     "_id": "t102",
-    "name": "wawaasd",
-    "price": 100,
+    "name": "wawaasdfsdfs",
+    "price": 104,
     "labels": [
-      "Doll",
       "Battery Powered",
       "Baby"
     ],
-    "inStock": false
+    "inStock": true
   },
   {
     "_id": "t103",

@@ -62,9 +62,7 @@ function _savetoysToFile() {
 function _filterBy(filterBy) {
     const toysToShow = toys.filter(toy => {
         //TODO: fix filterBy.inStock === 'false' to bool, it happens because of the request
-        return toy.name.toLowerCase().includes(filterBy.name.toLowerCase())
-            && filterBy.inStock === 'false' ? true : toy.inStock
-        //filterBy.labels.length ? filterBy.labels.every(label => toy.labels.includes(label)) : true)
+        return toy.name.toLowerCase().includes(filterBy.name.toLowerCase()) && filterBy.inStock === 'false' ? true : toy.inStock && filterBy.labels.length ? filterBy.labels.every(label => toy.labels.includes(label)) : true
     })
     if (filterBy.sortBy) {
         const sortBy = filterBy.sortBy

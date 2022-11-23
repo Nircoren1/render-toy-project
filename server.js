@@ -26,6 +26,8 @@ app.use(cors(corsOptions))
 
 
 app.get('/api/toy', (req, res) => {
+    console.log(req.query);
+
     toyService.query(req.query)
         .then(toys => {
             res.send(toys)
