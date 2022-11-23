@@ -25,15 +25,5 @@
       "Baby"
     ],
     "inStock": false
-  },
-  {
-    "_id": "t105",
-    "name": "Doll 4",
-    "price": 121,
-    "labels": [
-      "Doll",
-      "Baby"
-    ],
-    "inStock": false
   }
 ]
